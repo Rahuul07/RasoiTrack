@@ -1,38 +1,68 @@
 
-import { useEffect, useState } from 'react'
+import './App.css'
 
 function App() {
-  const [health, setHealth] = useState(null)
-  const [error, setError] = useState('')
-
-  useEffect(() => {
-    fetch('/api/health')
-      .then((response) => {
-        if (!response.ok) {
-          throw new Error('Backend request failed')
-        }
-        return response.json()
-      })
-      .then((data) => setHealth(data))
-      .catch((err) => setError(err.message))
-  }, [])
-
   return (
-    <div>
-      <h1>RasoiTrack</h1>
-      <h2>Frontend - Backend Connection Test</h2>
+    <div className="website">
+      <header className="navbar">
+        <a href="#home" className="logo">
+          <span>🍃</span> Rasoi Katta
+        </a>
 
-      {health && (
-        <div>
-          <p>Application: {health.application}</p>
-          <p>Status: {health.status}</p>
-          <p>Message: {health.message}</p>
-        </div>
-      )}
+        <nav>
+          <a href="#home">Home</a>
+          <a href="#about">About</a>
+          <a href="#contact">Contact</a>
+          <a href="#login" className="login-button">Login</a>
+        </nav>
+      </header>
 
-      {error && <p>Error: {error}</p>}
+      <main>
+        <section className="hero" id="home">
+          <div className="hero-content">
+            <p className="tagline">Ghar Se Door Ghar Jaisa</p>
 
-      {!health && !error && <p>Connecting to backend...</p>}
+            <h1>
+              Homemade Taste,
+              <span> Everyday Happiness.</span>
+            </h1>
+
+            <p className="hero-description">
+              Enjoy fresh, delicious and homely vegetarian meals
+              at Rasoi Katta. Good food, made with love.
+            </p>
+
+            <a href="#login" className="primary-button">
+              Get Started
+            </a>
+          </div>
+        </section>
+
+        <section className="welcome" id="about">
+          <p className="section-label">WELCOME TO RASOI KATTA</p>
+          <h2>Your Home Away From Home</h2>
+          <p>
+            We serve fresh and delicious meals with the warmth
+            and taste of homemade food.
+          </p>
+        </section>
+
+        <section className="contact" id="contact">
+          <h2>Visit Rasoi Katta</h2>
+          <p>Near Krishna Medical College, Sankeshwar</p>
+          <p>Contact: 7338082153</p>
+        </section>
+
+        <section className="login-section" id="login">
+          <h2>Welcome Back!</h2>
+          <p>Login to access your RasoiTrack account.</p>
+          <a href="#home" className="primary-button">Login</a>
+        </section>
+      </main>
+
+      <footer>
+        © 2026 Rasoi Katta. All rights reserved.
+      </footer>
     </div>
   )
 }
