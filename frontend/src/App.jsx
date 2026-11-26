@@ -8,6 +8,8 @@ import About from './pages/guest/About'
 import Contact from './pages/guest/Contact'
 import Login from './pages/Login'
 
+import './styles/App.css'
+
 
 function App() {
   return (
