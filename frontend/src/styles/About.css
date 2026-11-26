@@ -120,22 +120,73 @@
   z-index: 2;
 }
 
-.about-art-leaf {
-  font-size: 44px;
-  color: #e4a64c;
+
+/* CHEF HAT BRAND LOGO */
+
+.chef-hat-logo {
+  width: 100px;
+  height: 85px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 15px;
 }
 
-.about-art-initials {
-  font-family: "Playfair Display", Georgia, serif;
-  font-size: 75px;
-  font-weight: 700;
-  line-height: 1;
+.chef-hat-svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+  overflow: visible;
+}
+
+.chef-hat-top,
+.chef-hat-left,
+.chef-hat-right,
+.chef-hat-base {
+  position: absolute;
+  display: block;
+  background: #e4a64c;
+}
+
+.chef-hat-top {
+  width: 43px;
+  height: 43px;
+  border-radius: 50%;
+  top: 0;
+  left: 24px;
+}
+
+.chef-hat-left {
+  width: 39px;
+  height: 38px;
+  border-radius: 50%;
+  top: 17px;
+  left: 7px;
+}
+
+.chef-hat-right {
+  width: 39px;
+  height: 38px;
+  border-radius: 50%;
+  top: 17px;
+  right: 7px;
+}
+
+.chef-hat-base {
+  width: 78px;
+  height: 24px;
+  border-radius: 7px 7px 13px 13px;
+  bottom: 0;
+  left: 6px;
 }
 
 .about-art-name {
-  margin-top: 12px;
-  font-size: 14px;
-  letter-spacing: 4px;
+  color: #fff7e7;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 23px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-align: center;
 }
 
 .about-art-heart {
@@ -454,16 +505,8 @@
     height: 205px;
   }
 
-  .about-art-initials {
-    font-size: 60px;
-  }
-
   .about-art-name {
     font-size: 11px;
-  }
-
-  .about-art-leaf {
-    font-size: 35px;
   }
 
   .about-art-star {

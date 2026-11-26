@@ -41,12 +41,49 @@ function About() {
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.9 }}
         >
-          <div className="about-art-circle">
-            <span className="about-art-leaf">❧</span>
-            <span className="about-art-initials">RK</span>
-            <span className="about-art-name">RASOI KATTA</span>
-            <span className="about-art-heart">♥</span>
-          </div>
+         
+<div className="about-art-circle">
+ 
+<div className="chef-hat-logo">
+  <svg
+    viewBox="0 0 120 100"
+    className="chef-hat-svg"
+    xmlns="http://www.w3.org/2000/svg"
+    aria-label="Chef hat"
+    role="img"
+  >
+    <path
+      d="M25 58
+         C10 55 7 39 17 29
+         C23 23 32 22 40 27
+         C35 12 47 3 60 5
+         C74 5 82 16 79 29
+         C91 20 107 27 110 40
+         C114 52 105 60 95 62
+         L95 76
+         Q95 83 87 83
+         L32 83
+         Q25 83 25 76 Z"
+      fill="#e4a64c"
+    />
+    <path
+      d="M25 62 Q60 70 95 62"
+      fill="none"
+      stroke="#263d1c"
+      strokeWidth="4"
+      strokeLinecap="round"
+    />
+  </svg>
+</div>
+
+
+  <span className="about-art-name">
+    RASOI KATTA
+  </span>
+
+  <span className="about-art-heart">♥</span>
+</div>
+
 
           <span className="about-art-star star-one">✳</span>
           <span className="about-art-star star-two">✦</span>
