@@ -111,15 +111,16 @@ function Contact() {
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
           >
-            <span className="contact-info-icon">☎</span>
-            <h3>Call Us</h3>
-            <p>
-              Speak with Rasoi Katta for enquiries
-              about our mess services.
-            </p>
-            <span className="contact-detail-placeholder">
-              Official contact number to be added
-            </span>
+<span className="contact-info-icon">☎</span>
+<h3>Contact Us</h3>
+<p>
+  Have questions? Call our office for
+  information about Rasoi Katta.
+</p>
+
+<a href="tel:7338082153" className="contact-detail contact-phone-link" style={{ fontSize: '18px', fontWeight: '800' }}>
+  7338082153
+</a>
           </motion.article>
 
           <motion.article
@@ -130,15 +131,21 @@ function Contact() {
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.12 }}
           >
-            <span className="contact-info-icon">⌖</span>
-            <h3>Visit Us</h3>
-            <p>
-              Come and find us at our Rasoi Katta location.
-            </p>
-            <span className="contact-detail">
-              Near Krishna Medical College,
-              Sankeshwar
-            </span>
+
+<span className="contact-info-icon">⌖</span>
+<h3>Visit Us</h3>
+<p>
+  Come and find us at our Rasoi Katta location.
+</p>
+<span className="contact-detail">
+  Near Krishna Medical College,
+  Sankeshwar
+</span>
+
+<a href="#rasoi-map" className="contact-directions-button" style={{ fontSize: '16px' }}>
+  Get Directions <span>↗</span>
+</a>
+
           </motion.article>
 
           <motion.article
@@ -155,9 +162,9 @@ function Contact() {
               Ask us about monthly mess packages,
               services and general information.
             </p>
-            <span className="contact-detail">
-              We're happy to help
-            </span>
+<a href="#contact-form" className="contact-detail contact-enquiry-link"  style={{ fontSize: '16px' }}>
+  We're happy to help <span>↓</span>
+</a>
           </motion.article>
 
         </div>
@@ -249,24 +256,34 @@ function Contact() {
         </motion.form>
       </section>
 
-      {/* LOCATION SECTION */}
-      <section className="contact-location">
-        <div className="contact-location-content">
-          <span className="contact-section-label">FIND OUR PLACE</span>
-          <h2>Come Say Hello</h2>
-          <p>
-            Rasoi Katta
-            <br />
-            Near Krishna Medical College, Sankeshwar
-          </p>
-        </div>
 
-        <div className="contact-location-decoration" aria-hidden="true">
-          <span>⌖</span>
-          <strong>RASOI KATTA</strong>
-          <small>Ghar Se Door Ghar Jaisa</small>
-        </div>
-      </section>
+
+{/* GOOGLE MAP LOCATION */}
+<section className="contact-map-section" id="rasoi-map">
+  <div className="contact-map-heading">
+    <span className="contact-section-label">FIND US ON THE MAP</span>
+    <h2>Visit Rasoi Katta</h2>
+    <p>We look forward to welcoming you!</p>
+  </div>
+
+  <motion.div
+    className="contact-map-wrapper"
+    initial={{ opacity: 0, y: 25 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    viewport={{ once: true }}
+    transition={{ duration: 0.6 }}
+  >
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15320.470283024393!2d74.45993238715816!3d16.265743700000005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc093e2feec1cd5%3A0x3704549cb5248443!2sRasoi%20Katta!5e0!3m2!1sen!2sin!4v1795848490109!5m2!1sen!2sin"
+      title="Rasoi Katta Google Maps Location"
+      loading="lazy"
+      allowFullScreen
+      referrerPolicy="strict-origin-when-cross-origin"
+    />
+  </motion.div>
+</section>
+
+
 
     </div>
   )

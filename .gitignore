@@ -19,3 +19,6 @@ backend/target/
 
 # Logs
 *.log
+
+//$env:DB_PASSWORD = 'YOUR_MYSQL_PASSWORD'
+//.\mvnw.cmd spring-boot:run
