@@ -8,6 +8,8 @@ import About from './pages/guest/About'
 import Contact from './pages/guest/Contact'
 import Login from './pages/Login'
 
+import Register from './pages/guest/Register'
+
 import './styles/App.css'
 
 
@@ -20,6 +22,8 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/Login" element={<Login />} />
+
+          <Route path="/register" element={<Register />} />
           
         </Route>
       </Routes>
